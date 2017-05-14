@@ -2,6 +2,7 @@ from TwitterAnalysisHashTag import Analysis;
 from Authentication import AuthenticationAPI;
 from Trending import TrendingTweets;
 from GetGeoLocation import FIndGeoLocation;
+from GetGeocoder import GeoCoder2
 
 class MainProgram:
 
@@ -10,6 +11,7 @@ class MainProgram:
         trend = TrendingTweets()
         tweet = Analysis()
         geo = FIndGeoLocation
+        geoC = GeoCoder2
         fileName = "HappyBirthdayGurudev_Y2017_.csv"
         tweet.createFile(fileName)
 
@@ -21,4 +23,6 @@ class MainProgram:
 
         #tweet.getLocationTweet(api, "HappyBirthdayGurudev")
 
-        geo.findLocation("","mk",".csv")
+        #geo.findLocation("","mk",".csv")
+
+        geoC.findGeo("","mk",".csv")
